@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.BananaDryer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">#A371F7</item>
+        <item name="colorPrimaryVariant">#6E40C9</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/bg_primary</item>
+        <item name="android:navigationBarColor">@color/bg_primary</item>
+    </style>
+</resources>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.bananadryer.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"/>
+
+    <fragment
+        android:id="@+id/productionFragment"
+        android:name="com.bananadryer.ui.production.ProductionFragment"
+        android:label="Produksi"/>
+
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.bananadryer.ui.history.HistoryFragment"
+        android:label="Riwayat">
+        <action
+            android:id="@+id/action_history_to_detail"
+            app:destination="@id/historyDetailFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyDetailFragment"
+        android:name="com.bananadryer.ui.historydetail.HistoryDetailFragment"
+        android:label="Detail Riwayat">
+        <argument
+            android:name="historyId"
+            app:argType="integer"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.bananadryer.ui.settings.SettingsFragment"
+        android:label="Seting"/>
+
+</navigation>

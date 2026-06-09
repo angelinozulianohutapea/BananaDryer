@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <fragment
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_pill_nav"
+        android:padding="4dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout android:id="@+id/navDashboard"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:padding="8dp" android:paddingStart="14dp" android:paddingEnd="14dp"
+            android:background="@drawable/bg_pill_active">
+            <ImageView android:id="@+id/iconDashboard"
+                android:layout_width="20dp" android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_compass"/>
+            <TextView android:id="@+id/labelDashboard"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Home" android:textSize="9sp" android:textColor="@color/accent"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navProduksi"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:padding="8dp" android:paddingStart="14dp" android:paddingEnd="14dp">
+            <ImageView android:id="@+id/iconProduksi"
+                android:layout_width="20dp" android:layout_height="20dp"
+                android:src="@android:drawable/ic_media_play"/>
+            <TextView android:id="@+id/labelProduksi"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Produksi" android:textSize="9sp" android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navRiwayat"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:padding="8dp" android:paddingStart="14dp" android:paddingEnd="14dp">
+            <ImageView android:id="@+id/iconRiwayat"
+                android:layout_width="20dp" android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_recent_history"/>
+            <TextView android:id="@+id/labelRiwayat"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Riwayat" android:textSize="9sp" android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navSeting"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center"
+            android:padding="8dp" android:paddingStart="14dp" android:paddingEnd="14dp">
+            <ImageView android:id="@+id/iconSeting"
+                android:layout_width="20dp" android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_preferences"/>
+            <TextView android:id="@+id/labelSeting"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Seting" android:textSize="9sp" android:textColor="@color/text_secondary"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
