@@ -1,48 +1,137 @@
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=280&color=0:F7A41D,100:FFD95A&text=BananaDryer&fontSize=60&fontColor=ffffff&animation=fadeIn"/>
+
 <div align="center">
-
-# 🍌 BananaDryer
-
-### Aplikasi Android untuk Monitoring & Kontrol Mesin Pengering Pisang Otomatis
 
 [![Android](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](https://android.com)
 [![Kotlin](https://img.shields.io/badge/Kotlin-1.9.22-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)](https://kotlinlang.org)
 [![ESP32](https://img.shields.io/badge/Hardware-ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)](https://espressif.com)
-[![License](https://img.shields.io/badge/License-Academic-blue?style=for-the-badge)](LICENSE)
+[![Retrofit](https://img.shields.io/badge/HTTP-Retrofit-48B983?style=for-the-badge&logo=square&logoColor=white)](https://square.github.io/retrofit)
+[![Room](https://img.shields.io/badge/Database-Room%20SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://developer.android.com/training/data-storage/room)
+[![IoT](https://img.shields.io/badge/Category-IoT-FF6B00?style=for-the-badge&logo=homeassistant&logoColor=white)](https://github.com)
+[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge&logo=statuspage&logoColor=white)](https://github.com)
+[![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge&logo=semver&logoColor=white)](https://github.com)
+[![Build](https://img.shields.io/badge/Build-Passing-success?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com)
 
 <br/>
 
-> Sistem kendali mesin pengering pisang berbasis IoT — dikontrol dari genggaman tangan melalui jaringan WiFi lokal.
+> **Sistem kendali mesin pengering pisang berbasis IoT**
+> Dikontrol dari genggaman tangan melalui jaringan WiFi lokal.
 
 <br/>
+
+<img src="https://komarev.com/ghpvc/?username=angelinozulianohutapea&style=for-the-badge&color=F7A41D"/>
+
+![Stars](https://img.shields.io/github/stars/angelinozulianohutapea/BananaDryer?style=for-the-badge&color=F7A41D)
+![Forks](https://img.shields.io/github/forks/angelinozulianohutapea/BananaDryer?style=for-the-badge&color=FFD95A)
+![Issues](https://img.shields.io/github/issues/angelinozulianohutapea/BananaDryer?style=for-the-badge&color=E7352C)
+![Last Commit](https://img.shields.io/github/last-commit/angelinozulianohutapea/BananaDryer?style=for-the-badge&color=3DDC84)
 
 </div>
 
----
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
+
+## 📑 Quick Navigation
+
+| | Section |
+|--|---------|
+| 📱 | [Tampilan Aplikasi](#-tampilan-aplikasi) |
+| ✨ | [Fitur Utama](#-fitur-utama) |
+| 🏗️ | [Arsitektur](#-arsitektur) |
+| 🔌 | [Komunikasi & API](#-komunikasi--api) |
+| 🗄️ | [Database](#-database) |
+| 🔧 | [Hardware](#-hardware) |
+| 🛠️ | [Teknologi](#-teknologi) |
+| 🚀 | [Cara Penggunaan](#-cara-penggunaan) |
+| ⚙️ | [Instalasi & Build](#-instalasi--build) |
+| 👤 | [Developer](#-developer) |
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## 📱 Tampilan Aplikasi
 
-| Dashboard | Produksi | Riwayat | Detail | Pengaturan |
-|:---------:|:--------:|:-------:|:------:|:----------:|
-| Monitoring real-time | Konfigurasi mesin | Log sesi produksi | Detail sesi | Koneksi ESP32 |
+<div align="center">
 
----
+<table>
+<tr>
+<td align="center"><b>Dashboard</b></td>
+<td align="center"><b>Produksi</b></td>
+<td align="center"><b>Riwayat</b></td>
+<td align="center"><b>Detail</b></td>
+<td align="center"><b>Pengaturan</b></td>
+</tr>
+<tr>
+<td align="center">Monitoring real-time</td>
+<td align="center">Konfigurasi mesin</td>
+<td align="center">Log sesi produksi</td>
+<td align="center">Detail sesi</td>
+<td align="center">Koneksi ESP32</td>
+</tr>
+</table>
+
+<br/>
+
+<img src="assets/demo.gif" width="900"/>
+
+</div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## ✨ Fitur Utama
 
-| Fitur | Keterangan |
-|-------|------------|
-| 📡 **Monitoring Real-time** | Suhu & kelembaban diperbarui setiap 2 detik |
-| 📊 **Grafik Suhu Live** | Visualisasi perubahan suhu selama proses |
-| 🟢 **Indikator Koneksi** | Status koneksi ESP32 terlihat langsung |
-| ⚙️ **Konfigurasi Mesin** | Input TB1, TB2, DC Speed sebelum proses |
-| ⏱️ **Timer Akurat** | Progress bar & countdown berdasarkan TB1+TB2 |
-| 🔄 **Phase Indicator** | Indikator fase Pengiris dan Pengering |
-| 🗄️ **Database Lokal** | Riwayat produksi tersimpan di Room/SQLite |
-| 🗑️ **Swipe to Delete** | Hapus riwayat dengan geser kiri/kanan |
-| 📄 **Export PDF** | Export seluruh riwayat ke file PDF |
-| 🔔 **Notifikasi Push** | Notifikasi otomatis saat FINISHED atau ERROR |
+<div align="center">
+<table>
+<tr>
+<td align="center" width="33%">
+<h3>📡 Monitoring Real-Time</h3>
+Suhu & kelembaban diperbarui setiap 2 detik secara otomatis
+</td>
+<td align="center" width="33%">
+<h3>📊 Grafik Suhu Live</h3>
+Visualisasi perubahan suhu selama proses berlangsung
+</td>
+<td align="center" width="33%">
+<h3>🟢 Indikator Koneksi</h3>
+Status koneksi ESP32 terlihat langsung di dashboard
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+<h3>⚙️ Konfigurasi Mesin</h3>
+Input TB1, TB2, DC Speed sebelum memulai proses
+</td>
+<td align="center" width="33%">
+<h3>⏱️ Timer Akurat</h3>
+Progress bar & countdown berdasarkan nilai TB1+TB2
+</td>
+<td align="center" width="33%">
+<h3>🔄 Phase Indicator</h3>
+Indikator fase Pengiris dan Pengering secara real-time
+</td>
+</tr>
+<tr>
+<td align="center" width="33%">
+<h3>🗄️ Database Lokal</h3>
+Riwayat produksi tersimpan di Room/SQLite secara persisten
+</td>
+<td align="center" width="33%">
+<h3>🗑️ Swipe to Delete</h3>
+Hapus riwayat dengan mudah menggunakan geser kiri/kanan
+</td>
+<td align="center" width="33%">
+<h3>📄 Export PDF</h3>
+Export seluruh riwayat produksi ke file PDF siap cetak
+</td>
+</tr>
+<tr>
+<td align="center" colspan="3">
+<h3>🔔 Notifikasi Push</h3>
+Notifikasi otomatis muncul saat mesin FINISHED atau ERROR
+</td>
+</tr>
+</table>
+</div>
 
----
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## 🏗️ Arsitektur
 
@@ -79,9 +168,14 @@ Aplikasi menggunakan pola **MVVM (Model-View-ViewModel)** dengan Android Jetpack
   (Sensor)      (Stepper)     (DC + Pemanas)
 ```
 
----
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## 📁 Struktur Project
+
+<details>
+<summary><b>🗂️ Klik untuk melihat struktur folder lengkap</b></summary>
+
+<br/>
 
 ```
 BananaDryer/
@@ -112,7 +206,9 @@ BananaDryer/
 │       └── PrefsManager.kt
 ```
 
----
+</details>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## 🔌 Komunikasi & API
 
@@ -151,7 +247,7 @@ BananaDryer/
 | `FINISHED` | Proses selesai |
 | `ERROR` | Terjadi kesalahan |
 
----
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## 🗄️ Database
 
@@ -174,23 +270,60 @@ Tabel `production_history`:
 └────────────────────┴──────────┴───────────────────────────┘
 ```
 
----
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## 🔧 Hardware
 
-| Komponen | Fungsi |
-|----------|--------|
-| ESP32 | Web server HTTP + komunikasi WiFi |
-| Arduino Nano | Kontroler aktuator utama |
-| DHT21 | Sensor suhu dan kelembaban |
-| TB6600 #1 | Driver stepper motor pengiris |
-| TB6600 #2 | Driver stepper motor pengering |
-| L298N | Driver motor DC konveyor |
-| Relay 2 Channel | Kontrol elemen pemanas |
+<div align="center">
+<table>
+<tr>
+<td align="center" width="25%">
+<h3>📡 ESP32</h3>
+Web server HTTP<br/>+ komunikasi WiFi
+</td>
+<td align="center" width="25%">
+<h3>🔲 Arduino Nano</h3>
+Kontroler<br/>aktuator utama
+</td>
+<td align="center" width="25%">
+<h3>🌡️ DHT21</h3>
+Sensor suhu<br/>dan kelembaban
+</td>
+<td align="center" width="25%">
+<h3>⚡ TB6600 #1</h3>
+Driver stepper<br/>motor pengiris
+</td>
+</tr>
+<tr>
+<td align="center" width="25%">
+<h3>⚡ TB6600 #2</h3>
+Driver stepper<br/>motor pengering
+</td>
+<td align="center" width="25%">
+<h3>🔌 L298N</h3>
+Driver motor<br/>DC konveyor
+</td>
+<td align="center" colspan="2">
+<h3>🔥 Relay 2 Channel</h3>
+Kontrol elemen pemanas
+</td>
+</tr>
+</table>
+</div>
 
----
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## 🛠️ Teknologi
+
+<div align="center">
+
+<p>
+<img src="https://skillicons.dev/icons?i=kotlin,androidstudio,sqlite,arduino,git,github"/>
+</p>
+
+</div>
+
+<br/>
 
 | Komponen | Library | Versi |
 |----------|---------|-------|
@@ -204,7 +337,7 @@ Tabel `production_history`:
 | PDF | iTextPDF | 5.5.13.3 |
 | Build | AGP | 8.7.3 |
 
----
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## 🚀 Cara Penggunaan
 
@@ -233,7 +366,7 @@ Tabel `production_history`:
 8. Tab Riwayat → lihat detail atau export PDF
 ```
 
----
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## ⚙️ Instalasi & Build
 
@@ -252,17 +385,35 @@ git clone https://github.com/angelinozulianohutapea/BananaDryer.git
 - JDK 11
 - Android device / emulator min API 26
 
----
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 ## 👤 Developer
 
-**Angelino Zuliano Hutapea**
-Institut Teknologi Del
+<div align="center">
 
----
+<h2>Angelino Zuliano Hutapea</h2>
+
+<p><b>Institut Teknologi Del</b></p>
+
+<p><i>"Difficult does not mean impossible"</i></p>
+
+[![GitHub](https://img.shields.io/badge/GitHub-angelinozulianohutapea-181717?style=for-the-badge&logo=github)](https://github.com/angelinozulianohutapea)
+
+</div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=F7A41D&height=3"/>
 
 <div align="center">
 
-Tetapma BPJS 
+### 🍌 BananaDryer
+
+**Smart Banana Dryer Monitoring & Control System**
+
+Made with ❤️ using Kotlin, ESP32 and Arduino Nano
+
+*Institut Teknologi Del — IoT Final Project*
 
 </div>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=180&section=footer&color=0:F7A41D,100:FFD95A"/>
+ENDOFFILE
