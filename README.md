@@ -416,4 +416,3 @@ Made with ❤️ using Kotlin, ESP32 and Arduino Nano
 </div>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=180&section=footer&color=0:F7A41D,100:FFD95A"/>
-ENDOFFILE
